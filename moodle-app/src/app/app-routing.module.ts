@@ -8,12 +8,12 @@ const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
+        loadChildren: () => import('./home/home.module').then(m => m.HomePageModule),
         canLoad: [RequireAuth],
     },
     {
         path: 'login',
-        loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule),
+        loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule),
         canLoad: [RequireGuest],
     },
 ];
