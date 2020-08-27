@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 
-import { AuthService } from 'src/services/AuthService';
+import { AuthService } from '../../services/AuthService';
 
 @Component({
     selector: 'app-login',

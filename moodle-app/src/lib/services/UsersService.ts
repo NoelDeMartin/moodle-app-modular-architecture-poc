@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 
-import User from 'src/models/User';
+import { User } from '../models/User';
 
-const KNOWN_USERS: KeyValueMap<{ name: string }> = {
+const KNOWN_USERS = {
     johndoe: { name: 'John Doe' },
 };
 

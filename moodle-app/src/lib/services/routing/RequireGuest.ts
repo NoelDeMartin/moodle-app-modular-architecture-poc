@@ -1,7 +1,7 @@
 import { CanLoad, Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 
-import { AuthService } from 'src/services/AuthService';
+import { AuthService } from '../AuthService';
 
 @Injectable({ providedIn: 'root' })
 export class RequireGuest implements CanLoad {

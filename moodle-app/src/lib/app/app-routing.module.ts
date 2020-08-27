@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-
-import { RequireAuth } from 'src/services/routing/RequireAuth';
-import { RequireGuest } from 'src/services/routing/RequireGuest';
+import { LoginPage } from './login/login.page';
+import { HomePage } from './home/home.page';
+import { RequireAuth } from '../services/routing/RequireAuth';
+import { RequireGuest } from '../services/routing/RequireGuest';
 
 const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        loadChildren: () => import('./home/home.module').then(m => m.HomePageModule),
+        component: HomePage,
         canLoad: [RequireAuth],
     },
     {
         path: 'login',
-        loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule),
+        component: LoginPage,
         canLoad: [RequireGuest],
     },
 ];
@@ -24,4 +25,4 @@ const routes: Routes = [
     ],
     exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class MoodleAppRoutingModule { }
