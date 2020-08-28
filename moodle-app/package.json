@@ -7,7 +7,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:lib": "ng build lib",
+    "build:lib": "ng build lib && node ./scripts/prepare-lib-assets",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
