@@ -1,0 +1,11 @@
+<moodle-page-header title="Login"></moodle-page-header>
+
+<ion-content>
+    <moodle-login-header></moodle-login-header>
+    <moodle-login-form #form (credentialsSubmitted)="login($event)">
+        <ion-button submit-button type="submit" expand="block">
+            Login
+            <ion-icon slot="end" name="enter"></ion-icon>
+        </ion-button>
+    </moodle-login-form>
+</ion-content>

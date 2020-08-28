@@ -5,12 +5,16 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageModule } from './home/home.module';
 import { PlansPageModule } from './plans/plans.module';
+import { LoginPageModule } from './login/login.module';
 
 import { UsersService } from '../services/UsersService';
 
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [
+        AppComponent,
+    ],
     imports: [
+        LoginPageModule,
         MoodleAppModule.forRoot(),
         AppRoutingModule,
         HomePageModule,

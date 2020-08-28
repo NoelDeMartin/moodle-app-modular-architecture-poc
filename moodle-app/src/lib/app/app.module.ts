@@ -9,8 +9,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { MoodleAppComponent } from './app.component';
 import { MoodleAppRoutingModule } from './app-routing.module';
 
-import { HomePageModule } from './home/home.module';
-import { LoginPageModule } from './login/login.module';
+import { MoodleAppComponentsModule } from '../components';
+import { MoodleAppPagesModule } from '../pages';
 
 @NgModule({
     declarations: [
@@ -20,13 +20,14 @@ import { LoginPageModule } from './login/login.module';
         BrowserModule,
         IonicModule.forRoot(),
         MoodleAppRoutingModule,
-        HomePageModule,
-        LoginPageModule,
+        MoodleAppPagesModule,
+        MoodleAppComponentsModule,
     ],
     exports: [
         BrowserModule,
         IonicModule,
         MoodleAppComponent,
+        MoodleAppComponentsModule,
     ],
 })
 export class MoodleAppModule {

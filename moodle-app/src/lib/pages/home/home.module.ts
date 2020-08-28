@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
-
-import { LoginPage } from './login.page';
+import { FormsModule } from '@angular/forms';
+import { MoodleHomePage } from './home.page';
 
 @NgModule({
   imports: [
@@ -12,6 +10,6 @@ import { LoginPage } from './login.page';
     FormsModule,
     IonicModule,
   ],
-  declarations: [LoginPage]
+  declarations: [MoodleHomePage]
 })
-export class LoginPageModule {}
+export class MoodleHomePageModule {}

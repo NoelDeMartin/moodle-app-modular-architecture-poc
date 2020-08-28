@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes } from '@angular/router';
 
-import { AuthGuard, MOODLE_ROUTES } from 'moodle-app';
+import { AuthGuard, MOODLE_ROUTES, GuestGuard } from 'moodle-app';
 
 import { HomePage } from './home/home.page';
 import { PlansPage } from './plans/plans.page';
+import { LoginPage } from './login/login.page';
 
 const routes: Routes = [
     {
@@ -12,6 +13,11 @@ const routes: Routes = [
         pathMatch: 'full',
         component: HomePage,
         canActivate: [AuthGuard],
+    },
+    {
+        path: 'login',
+        component: LoginPage,
+        canActivate: [GuestGuard],
     },
     {
         path: 'plans',

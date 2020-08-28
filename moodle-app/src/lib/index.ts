@@ -17,7 +17,8 @@ export { MoodleAppRoutingModule, MOODLE_ROUTES } from './app/app-routing.module'
 export { MoodleAppComponent } from './app/app.component';
 export { MoodleAppModule } from './app/app.module';
 
-export { AuthGuard } from './guards/auth.guard';
-export { AuthService } from './services/AuthService';
-export { User } from './models/User';
-export { UsersService } from './services/UsersService';
+export * from './pages';
+export * from './services';
+export * from './guards';
+export * from './models';
+export * from './components';

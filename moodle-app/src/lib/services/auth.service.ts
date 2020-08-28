@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { UsersService } from './UsersService';
-import { User } from '../models/User';
+import { UsersService } from './users.service';
+import { User } from '../models';
 
 const USER_KEY = 'auth-user';
 

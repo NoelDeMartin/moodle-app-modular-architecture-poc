@@ -1,21 +1,20 @@
 import { NgModule, Inject, InjectionToken } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes, Router } from '@angular/router';
-import { LoginPage } from './login/login.page';
-import { HomePage } from './home/home.page';
+
 import { Arr } from '../utils/Arr';
-import { AuthGuard } from '../guards/auth.guard';
-import { GuestGuard } from '../guards/guest.guard';
+import { AuthGuard, GuestGuard } from '../guards';
+import { MoodleLoginPage, MoodleHomePage } from '../pages';
 
 const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        component: HomePage,
+        component: MoodleHomePage,
         canActivate: [AuthGuard],
     },
     {
         path: 'login',
-        component: LoginPage,
+        component: MoodleLoginPage,
         canActivate: [GuestGuard],
     },
 ];
