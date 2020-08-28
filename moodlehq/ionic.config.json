@@ -1,0 +1,7 @@
+{
+  "name": "moodlehq",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
