@@ -2,20 +2,20 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginPage } from './login/login.page';
 import { HomePage } from './home/home.page';
-import { RequireAuth } from '../services/routing/RequireAuth';
-import { RequireGuest } from '../services/routing/RequireGuest';
+import { AuthGuard } from '../guards/auth.guard';
+import { GuestGuard } from '../guards/guest.guard';
 
 const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
         component: HomePage,
-        canLoad: [RequireAuth],
+        canActivate: [AuthGuard],
     },
     {
         path: 'login',
         component: LoginPage,
-        canLoad: [RequireGuest],
+        canActivate: [GuestGuard],
     },
 ];
 

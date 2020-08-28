@@ -1,14 +1,14 @@
-import { CanLoad, Router } from '@angular/router';
+import { Router, CanActivate } from '@angular/router';
 import { Injectable } from '@angular/core';
 
-import { AuthService } from '../AuthService';
+import { AuthService } from '../services/AuthService';
 
 @Injectable({ providedIn: 'root' })
-export class RequireAuth implements CanLoad {
+export class AuthGuard implements CanActivate {
 
     constructor(private router: Router, private auth: AuthService) {}
 
-    async canLoad(): Promise<boolean> {
+    async canActivate(): Promise<boolean> {
         if (!this.auth.isLoggedIn()) {
             this.router.navigateByUrl('/login');
 
