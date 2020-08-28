@@ -13,9 +13,11 @@ export function bootstrapApplication(module) {
         .catch(err => console.log(err));
 }
 
-export { MoodleAppRoutingModule } from './app/app-routing.module';
+export { MoodleAppRoutingModule, MOODLE_ROUTES } from './app/app-routing.module';
 export { MoodleAppComponent } from './app/app.component';
 export { MoodleAppModule } from './app/app.module';
 
+export { AuthGuard } from './guards/auth.guard';
+export { AuthService } from './services/AuthService';
 export { User } from './models/User';
 export { UsersService } from './services/UsersService';
