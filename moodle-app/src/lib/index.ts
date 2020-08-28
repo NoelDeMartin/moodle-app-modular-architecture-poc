@@ -16,3 +16,6 @@ export function bootstrapApplication(module) {
 export { MoodleAppRoutingModule } from './app/app-routing.module';
 export { MoodleAppComponent } from './app/app.component';
 export { MoodleAppModule } from './app/app.module';
+
+export { User } from './models/User';
+export { UsersService } from './services/UsersService';
