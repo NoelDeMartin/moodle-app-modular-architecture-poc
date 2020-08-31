@@ -1,0 +1,7 @@
+{
+  "name": "acme",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
