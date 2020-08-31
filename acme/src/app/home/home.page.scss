@@ -1,0 +1,16 @@
+ion-content {
+    --background: var(--ion-color-primary);
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    h1 {
+        color: white;
+    }
+
+}
