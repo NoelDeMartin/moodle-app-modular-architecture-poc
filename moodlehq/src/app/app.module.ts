@@ -1,28 +1,11 @@
-import { MoodleAppModule, UsersService as BaseUserService, MOODLE_ROUTES } from 'moodle-app';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
-import { HomePageModule } from './home/home.module';
-import { PlansPageModule } from './plans/plans.module';
-import { LoginPageModule } from './login/login.module';
-
-import { UsersService } from '../services/UsersService';
+import { MoodleHQModule } from '../lib';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-    ],
-    imports: [
-        LoginPageModule,
-        MoodleAppModule.forRoot(),
-        AppRoutingModule,
-        HomePageModule,
-        PlansPageModule,
-    ],
-    providers: [
-        { provide: BaseUserService, useExisting: UsersService },
-    ],
+    declarations: [AppComponent],
+    imports: [MoodleHQModule.forRoot()],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
